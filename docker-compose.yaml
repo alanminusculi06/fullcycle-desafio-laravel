@@ -14,7 +14,7 @@ services:
             - redis
         environment: 
             - DB_HOST=db
-            - DB_DATABASEHOST=laravel
+            - DB_DATABASE=laravel
             - DB_USERNAME=root
             - DB_PASSWORD=root
 
