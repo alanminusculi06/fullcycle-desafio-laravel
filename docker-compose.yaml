@@ -19,7 +19,9 @@ services:
             - DB_PASSWORD=root
 
     nginx: 
-        build: .docker/nginx
+        build: .docker/nginx     
+        entrypoint: dockerize -template /etc/nginx/conf.d/nginx.conf:/etc/nginx/conf.d/nginx.conf
+        command: ["nginx", "-g", "daemon off;"]
         container_name: nginx
         restart: always
         tty: true
@@ -31,6 +33,9 @@ services:
             - app-network
         depends_on: 
             - app
+        environment: 
+            - APP_NAME=app
+            - APP_PORT=9000
 
     db:
         build: .docker/mysql
