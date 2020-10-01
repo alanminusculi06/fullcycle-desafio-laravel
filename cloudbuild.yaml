@@ -18,11 +18,11 @@ steps:
 
 - id: "Rodando key generate"
   name: 'gcr.io/cloud-builders/docker'
-  args: ['exec', '-t', 'app', 'php', 'aritisan', 'key:generate']
+  args: ['exec', '-t', 'app', 'php', 'artisan', 'key:generate']
 
 - id: "Rodando migrações"
   name: 'gcr.io/cloud-builders/docker'
-  args: ['exec', '-t', 'app', 'php', 'aritisan', 'migrate']
+  args: ['exec', '-t', 'app', 'php', 'artisan', 'migrate']
 
 - id: "Rodando phpunit"
   name: 'gcr.io/cloud-builders/docker'
