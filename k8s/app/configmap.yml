@@ -6,7 +6,7 @@ data:
   env: |
     APP_NAME=docker-laravel
     APP_ENV=local
-    APP_KEY=teste
+    APP_KEY=base64:wd4rgNXE1kDVRRMvHjnveRncHi2lB8Ze/WUFJ6rD7X8=
     APP_DEBUG=true
     APP_URL=http://localhost
 
